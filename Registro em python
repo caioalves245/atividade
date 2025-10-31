@@ -9,7 +9,7 @@ def adicionar_funcionario(nome, cargo, salario, data_admissao):
         "data_admissao": data_admissao
     }
     funcionarios.append(funcionario)
-    print(f"✅ Funcionário {nome} adicionado com sucesso!\n")
+    print(f" Funcionário {nome} adicionado com sucesso!\n")
 
 
 def listar_funcionarios():
@@ -17,7 +17,7 @@ def listar_funcionarios():
         print("Nenhum funcionário cadastrado.\n")
         return
     
-    print("📋 Lista de Funcionários:")
+    print(" Lista de Funcionários:")
     for f in funcionarios:
         print(f"Nome: {f['nome']}, Cargo: {f['cargo']}, Salário: R${f['salario']}, Admissão: {f['data_admissao']}")
     print()
@@ -26,10 +26,10 @@ def listar_funcionarios():
 def buscar_por_nome(nome):
     for f in funcionarios:
         if f["nome"].lower() == nome.lower():
-            print("🔎 Funcionário encontrado:")
+            print(" Funcionário encontrado:")
             print(f"Nome: {f['nome']}, Cargo: {f['cargo']}, Salário: R${f['salario']}, Admissão: {f['data_admissao']}\n")
             return
-    print("❌ Funcionário não encontrado.\n")
+    print(" Funcionário não encontrado.\n")
 
 
 def media_salarial():
@@ -39,7 +39,7 @@ def media_salarial():
 
     total = sum(f["salario"] for f in funcionarios)
     media = total / len(funcionarios)
-    print(f"💰 Média salarial dos funcionários: R${media:.2f}\n")
+    print(f" Média salarial dos funcionários: R${media:.2f}\n")
 
 
 adicionar_funcionario("Isadora", "Gerente", 4500, "01/02/2023")
